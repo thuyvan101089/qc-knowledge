@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -8,4 +9,22 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #ddd;
+  }
 }
